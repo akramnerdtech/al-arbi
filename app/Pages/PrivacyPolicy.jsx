@@ -3,29 +3,29 @@
 export default function PrivacyPolicy() {
   return (
     <div className="bg-black min-h-screen text-yellow-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-5xl font-bold text-yellow-300 mb-4">
+        <div className="mb-8 md:mb-12 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-yellow-300 mb-4">
             Privacy Policy
           </h1>
           {/* <p className="text-yellow-200 text-lg">Last updated: April 2026</p> */}
         </div>
 
         {/* Content */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {/* Introduction */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Introduction</h2>
-            <p className="text-yellow-200 leading-relaxed">
+          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Introduction</h2>
+            <p className="text-yellow-200 leading-relaxed text-sm sm:text-base">
               Welcome to Al-Arbi Jewellers. We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website.
             </p>
           </section>
 
           {/* Information Collection */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Information We Collect</h2>
-            <div className="space-y-3 text-yellow-200">
+          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Information We Collect</h2>
+            <div className="space-y-3 text-yellow-200 text-sm sm:text-base">
               <p>
                 <strong className="text-white">Personal Information:</strong> Name, email address, phone number, mailing address, and other contact details when you voluntarily submit them through our website, contact forms, or purchase transactions.
               </p>

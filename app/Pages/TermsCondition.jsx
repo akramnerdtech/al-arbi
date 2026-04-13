@@ -3,32 +3,32 @@
 export default function TermsCondition() {
   return (
     <div className="bg-black min-h-screen text-yellow-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-5xl font-bold text-yellow-300 mb-4">
+        <div className="mb-8 md:mb-12 text-center">
+          <h1 className="text-4xl sm:text-5xl font-bold text-yellow-300 mb-4">
             Terms & Conditions
           </h1>
           {/* <p className="text-yellow-200 text-lg">Last updated: April 2026</p> */}
         </div>
 
         {/* Content */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {/* Agreement */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Agreement to Terms</h2>
-            <p className="text-gray-300 leading-relaxed">
+          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Agreement to Terms</h2>
+            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
               By accessing and using the Al-Arbi Jewellers website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
             </p>
           </section>
 
           {/* Use License */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Use License</h2>
-            <p className="text-gray-300 leading-relaxed mb-3">
+          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Use License</h2>
+            <p className="text-gray-300 leading-relaxed mb-3 text-sm sm:text-base">
               Permission is granted to temporarily download one copy of the materials (information or software) from Al-Arbi Jewellers website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
             </p>
-            <ul className="space-y-2 text-gray-300 list-disc list-inside">
+            <ul className="space-y-2 text-gray-300 list-disc list-inside text-sm sm:text-base">
               <li>Modify or copy the materials</li>
               <li>Use the materials for any commercial purpose or for any public display</li>
               <li>Attempt to decompile or reverse engineer any software contained on the website</li>
