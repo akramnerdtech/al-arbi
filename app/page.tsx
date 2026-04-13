@@ -59,7 +59,7 @@ export default function Home() {
             <button className="px-8 sm:px-12 py-4 cursor-pointer text-base sm:text-lg rounded-2xl border border-yellow-300/50 transition duration-300 hover:bg-yellow-100 hover:text-black w-full sm:w-auto">
               Shop Now
             </button>
-            <button className="px-8 sm:px-12 py-4 border cursor-pointer border-yellow-400 text-yellow-300 font-black text-base sm:text-lg rounded-2xl bg-black/30 transition duration-300 hover:bg-yellow-100 hover:text-black hover:-translate-y-0.5 w-full sm:w-auto">
+            <button className="px-8 sm:px-12 py-4 border cursor-pointer border-yellow-400 text-yellow-300  text-base sm:text-lg rounded-2xl bg-black/30 transition duration-300 hover:bg-yellow-100 hover:text-black hover:-translate-y-0.5 w-full sm:w-auto">
               View Collection
             </button>
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
                     {collection.description}
                   </p>
 
-                  <button className="w-full py-3 cursor-pointer text-black font-bold text-sm sm:text-base rounded-2xl border border-yellow-300/50 transition duration-300 hover:bg-yellow-100 hover:text-black hover:-translate-y-0.5">
+                  <button className="w-full py-3 cursor-pointer text-yellow-300 font-bold text-sm sm:text-base rounded-2xl border hover:border-yellow-300/50 transition duration-300   hover:-translate-y-0.5">
                     Explore Collection
                   </button>
                 </div>
@@ -163,7 +163,7 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl text-yellow-200 mb-8 md:mb-10 font-light leading-relaxed max-w-3xl mx-auto">
               Browse our complete collection and discover timeless elegance that will make you shine brighter than ever.
             </p>
-            <button className="px-12 sm:px-16 py-4 md:py-5 cursor-pointer text-black font-bold text-lg md:text-xl rounded-3xl border border-yellow-300/50 transition duration-300 hover:bg-yellow-100 hover:text-black hover:-translate-y-0.5 w-full sm:w-auto">
+            <button className="px-12 sm:px-16 py-4 md:py-5 cursor-pointer text-yellow-300 font-bold text-lg md:text-xl rounded-3xl border hover:border-yellow-300/50 transition duration-300  hover:-translate-y-0.5 w-full sm:w-auto">
               Explore All Collections
             </button>
           </div>

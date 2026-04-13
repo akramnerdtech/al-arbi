@@ -31,7 +31,7 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-10">
             <Link
               href="/"
-              className="text-yellow-100 hover:text-yellow-300 font-bold text-lg tracking-wide transition-colors duration-300"
+              className=" hover:text-yellow-300 font-bold text-lg tracking-wide transition-colors duration-300"
             >
               Home
             </Link>
