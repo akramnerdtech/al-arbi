@@ -1,174 +1,272 @@
 import Image from 'next/image';
 
-export default function Home() {
-  const collections = [
-    {
-      id: 1,
-      name: 'Necklaces',
-      description: 'Elegant necklaces for every style',
-      image: '/necklace.png'
-    },
-    {
-      id: 2,
-      name: 'Chains',
-      description: 'Premium gold and silver chains',
-      image: '/chain.png'
-    },
-    {
-      id: 3,
-      name: 'Bangles',
-      description: 'Beautiful bangles for every occasion',
-      image: '/bangles.png'
-    }
-  ];
+const cards = [
+  {
+    title: 'Bracelets',
+    subtitle: 'Categories',
+    image: '/chain.png',
+    accent: 'Layered gold polish for statement styling.',
+  },
+  {
+    title: 'Earings',
+    subtitle: 'Categories',
+    image: '/necklace.png',
+    accent: 'Sparkling silhouettes for elegant occasions.',
+  },
+  {
+    title: 'Couple Rings',
+    subtitle: 'Categories',
+    image: '/bangles.png',
+    accent: 'Symbolic luxury shaped with fine detailing.',
+  },
+];
 
+const details = [
+  {
+    title: 'Brilliant Cut',
+    copy: 'Layered with luminous stones and warm golden accents for an unmistakably regal finish.',
+    top: '18%',
+  },
+  {
+    title: 'Golden Glow',
+    copy: 'Balanced proportions create a dramatic centerpiece designed to feel rare and refined.',
+    top: '43%',
+  },
+];
+
+const features = [
+  {
+    title: 'Curated Luxury',
+    copy: 'Each category is presented like a boutique showcase with stronger visual hierarchy and a richer premium finish.',
+  },
+  {
+    title: 'Craftsmanship First',
+    copy: 'We design the experience around the jewellery itself so every image, shadow, and surface feels intentional.',
+  },
+  {
+    title: 'Modern Elegance',
+    copy: 'A black-and-gold palette paired with soft cream accents gives the homepage a more refined fashion-house tone.',
+  },
+];
+
+const experience = [
+  {
+    number: '01',
+    title: 'Exclusive Designs',
+    copy: 'Distinctive jewellery made to stand apart with timeless form and premium visual balance.',
+  },
+  {
+    number: '02',
+    title: 'Premium Finish',
+    copy: 'Richer textures, polished presentation, and softer luxurious contrast across every section.',
+  },
+  {
+    number: '03',
+    title: 'Memorable Presence',
+    copy: 'A stronger digital identity that feels more premium at first glance and more trustworthy on longer viewing.',
+  },
+];
+
+function ProductCard({
+  title,
+  subtitle,
+  image,
+  accent,
+}: {
+  title: string;
+  subtitle: string;
+  image: string;
+  accent: string;
+}) {
   return (
-    <main className="bg-black min-h-screen text-white relative overflow-hidden">
+    <article className="group shimmer-sweep relative overflow-hidden rounded-[1.7rem] border border-[#d7bf89]/35 bg-[linear-gradient(180deg,#f7ebdc_0%,#efdfcd_100%)] p-4 shadow-[0_28px_70px_rgba(4,16,12,0.22)] transition duration-500 hover:-translate-y-2 hover:shadow-[0_36px_90px_rgba(0,0,0,0.28)]">
+      <div className="pointer-events-none absolute inset-0 rounded-[1.7rem] border border-white/25 opacity-0 transition duration-500 group-hover:opacity-100" />
+      <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#d6b56e]/15 blur-2xl opacity-0 transition duration-500 group-hover:opacity-100 group-hover:animate-soft-glow" />
 
-      {/* Hero Section */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div className="text-center">
-          {/* Elegant Logo/Brand */}
-          <div className="mb-12">
-            <div className="inline-flex items-center justify-center rounded-full border border-yellow-500/30 bg-black/40 px-6 py-3">
-              <span className="text-base uppercase tracking-[0.4em] text-yellow-300 font-semibold">
-                Luxury Made Simple
-              </span>
-            </div>
-            <div className="mt-4">
-              <div className="w-24 h-1 bg-yellow-400 mx-auto rounded-full"></div>
-            </div>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-8 tracking-tight text-yellow-300">
-              Al-Arbi Jewellers
-          </h1>
-
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-2xl sm:text-3xl md:text-4xl text-yellow-100 mb-6 font-light tracking-wide leading-relaxed">
-              Premium Jewelry for Every Occasion
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-yellow-200 leading-relaxed font-light italic px-4">
-              Discover our exclusive collection of exquisite jewellery pieces, crafted with precision and elegance.
-              Each piece tells a story of luxury and sophistication, designed to make you shine brighter than ever.
-            </p>
-          </div>
-
-          {/* Premium Call to Action */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
-            <button className="px-8 sm:px-12 py-4 cursor-pointer text-base sm:text-lg rounded-2xl border border-yellow-300/50 transition duration-300 hover:bg-yellow-100 hover:text-black w-full sm:w-auto">
-              Shop Now
-            </button>
-            <button className="px-8 sm:px-12 py-4 border cursor-pointer border-yellow-400 text-yellow-300  text-base sm:text-lg rounded-2xl bg-black/30 transition duration-300 hover:bg-yellow-100 hover:text-black hover:-translate-y-0.5 w-full sm:w-auto">
-              View Collection
-            </button>
-          </div>
-        </div>
-
-        {/* Featured Collections */}
-        <div className="mt-32">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-yellow-300">
-                Our Collections
-            </h2>
-            <div className="flex items-center justify-center gap-4 mb-5">
-              <div className="w-16 sm:w-24 h-1 bg-yellow-400 rounded-full"></div>
-              <div className="w-16 sm:w-24 h-1 bg-yellow-400 rounded-full"></div>
-            </div>
-            <p className="text-yellow-200 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed px-4">
-              Explore our meticulously crafted collections, each piece a masterpiece of elegance and sophistication.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-            {collections.map((collection) => (
-              <div
-                key={collection.id}
-                className="relative bg-[#111111] rounded-3xl border border-yellow-500/40 overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative h-64 sm:h-80 md:h-96 bg-black overflow-hidden">
-                  <img
-                    src={collection.image}
-                    alt={collection.name}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black/40"></div>
-                </div>
-
-                <div className="p-6 md:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-yellow-300 mb-3 tracking-wide">
-                    {collection.name}
-                  </h3>
-                  <p className="text-yellow-100 text-sm sm:text-base mb-6 leading-relaxed font-light">
-                    {collection.description}
-                  </p>
-
-                  <button className="w-full py-3 cursor-pointer text-yellow-300 font-bold text-sm sm:text-base rounded-2xl border hover:border-yellow-300/50 transition duration-300   hover:-translate-y-0.5">
-                    Explore Collection
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Choose Us */}
-        <div className="mt-24 md:mt-32">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-6 text-yellow-300">
-                Why Choose Us
-            </h2>
-            <div className="flex items-center justify-center gap-4 mb-5">
-              <div className="w-12 sm:w-16 h-1 bg-yellow-400 rounded-full"></div>
-              <div className="w-12 sm:w-16 h-1 bg-yellow-400 rounded-full"></div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {[
-              {
-                title: 'Premium Quality',
-                description: 'Finest jewellery crafted with precision and attention to detail, using only the highest grade materials'
-              },
-              {
-                title: 'Authentic Designs',
-                description: 'Unique designs that reflect cultural heritage and modern elegance, handcrafted by master artisans'
-              },
-              {
-                title: 'True Value',
-                description: 'Honest pricing without compromising on quality and craftsmanship, offering exceptional value'
-              }
-            ].map((feature, index) => (
-              <div key={index} className="relative bg-[#111111] p-6 md:p-10 rounded-3xl border border-yellow-500/40 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <div className="text-center">
-                  <div className="mx-auto mb-6 md:mb-8 h-1 w-20 md:w-28 rounded-full bg-yellow-400"></div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-yellow-200 mb-4 tracking-wide">
-                    {feature.title}
-                  </h3>
-                  <p className="text-yellow-100 leading-relaxed font-light text-sm sm:text-base">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Footer CTA */}
-        <div className="mt-24 md:mt-32 text-center px-4">
-          <div className="bg-[#111111] rounded-3xl p-8 md:p-12 border border-yellow-400/30">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-5">
-              Ready to Find Your Perfect Piece?
-            </h3>
-            <p className="text-base sm:text-lg md:text-xl text-yellow-200 mb-8 md:mb-10 font-light leading-relaxed max-w-3xl mx-auto">
-              Browse our complete collection and discover timeless elegance that will make you shine brighter than ever.
-            </p>
-            <button className="px-12 sm:px-16 py-4 md:py-5 cursor-pointer text-yellow-300 font-bold text-lg md:text-xl rounded-3xl border hover:border-yellow-300/50 transition duration-300  hover:-translate-y-0.5 w-full sm:w-auto">
-              Explore All Collections
-            </button>
-          </div>
-        </div>
+      <p className="text-xs uppercase tracking-[0.22em] text-[#7a6958]">{subtitle}</p>
+      <div className="mt-1 flex items-start justify-between gap-4">
+        <h3 className="text-[2rem] leading-none tracking-tight text-[#1d1a18] sm:text-[2.25rem]">
+          {title}
+        </h3>
+        <span className="rounded-full border border-[#c9ab67]/45 bg-white/40 px-3 py-1 text-[10px] uppercase tracking-[0.28em] text-[#6f5930]">
+          Premium
+        </span>
       </div>
+
+      <div className="relative mt-5 h-48 overflow-hidden rounded-[1.25rem] border border-[#ddc9a7]/50 bg-[radial-gradient(circle_at_top,#fffaf3,#ead8c3)]">
+        <Image
+          src={image}
+          alt={title}
+          fill
+          sizes="(max-width: 1024px) 100vw, 320px"
+          className="object-contain p-5 transition duration-700 group-hover:scale-[1.08] group-hover:rotate-2"
+        />
+      </div>
+
+      <p className="mt-4 text-sm leading-7 text-[#695748]">{accent}</p>
+
+      <button className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#14110f] px-5 py-3 text-sm text-[#f7eddc] transition duration-300 hover:bg-[#231d19] hover:pr-6">
+        Check More Products
+        <span aria-hidden="true">{'->'}</span>
+      </button>
+    </article>
+  );
+}
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#f4ede4]">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_10%,rgba(212,175,99,0.18),transparent_28%),linear-gradient(135deg,#050505_0%,#0a0908_42%,#14110f_100%)] text-[#f6efe3]">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
+        <div className="animate-soft-glow absolute -left-20 top-20 h-56 w-56 rounded-full bg-[#d4af63]/12 blur-3xl" />
+        <div className="animate-soft-glow absolute bottom-10 right-0 h-72 w-72 rounded-full bg-[#d4af63]/8 blur-3xl" />
+        <div className="absolute inset-y-0 left-[52%] hidden w-px bg-[linear-gradient(180deg,transparent,rgba(219,194,137,0.35),transparent)] lg:block" />
+
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:px-8 lg:pb-28 lg:pt-32">
+          <div className="grid gap-10 sm:gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+            <div className="max-w-xl pt-6 lg:pt-12">
+              <p className="animate-fade-up text-[11px] uppercase tracking-[0.45em] text-[#c9b07a]">
+                Jewelry Design With Love
+              </p>
+              <h1 className="animate-fade-up-delay-1 mt-5 text-4xl leading-[0.92] tracking-tight text-[#f8f1e7] sm:mt-6 sm:text-6xl lg:text-[6.3rem]">
+                The Perfect
+                <span className="block">Jewels For You</span>
+              </h1>
+              <p className="animate-fade-up-delay-2 mt-5 max-w-lg text-sm leading-7 text-[#d2c3ad] sm:mt-6 sm:text-lg sm:leading-8">
+                Discover a luxurious black-and-gold collection with elegant craftsmanship,
+                rich detailing, and a premium boutique presentation.
+              </p>
+
+              <div className="animate-fade-up-delay-2 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center sm:gap-4">
+                <button className="w-full rounded-full bg-white px-6 py-3.5 text-base font-medium text-[#111513] shadow-[0_12px_30px_rgba(255,255,255,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(255,255,255,0.2)] sm:w-auto sm:px-8 sm:py-4">
+                  Contact Us
+                </button>
+                <button className="w-full rounded-full border border-[rgba(219,194,137,0.45)] px-6 py-3.5 text-sm uppercase tracking-[0.24em] text-[#efe1c2] transition duration-300 hover:-translate-y-0.5 hover:bg-[rgba(219,194,137,0.08)] sm:w-auto sm:px-8 sm:py-4 sm:tracking-[0.28em]">
+                  Explore
+                </button>
+              </div>
+
+              <div className="animate-fade-up-delay-2 mt-10 flex items-center gap-4 text-[#dbc28d] sm:mt-14 sm:gap-5">
+                <div className="h-px w-20 bg-gradient-to-r from-[#dbc28d] to-transparent" />
+                <span className="text-2xl">{'->'}</span>
+              </div>
+            </div>
+
+            <div className="relative min-h-[280px] sm:min-h-[420px] lg:min-h-[720px]">
+              <div className="animate-soft-glow absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(212,175,99,0.16),transparent_62%)]" />
+              <div className="absolute left-1/2 top-1/2 h-[82%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(240,232,220,0.12)]" />
+
+              <div className="animate-float-gold absolute left-1/2 top-1/2 z-10 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2">
+                <Image
+                  src="/necklace.png"
+                  alt="Featured premium jewellery"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 680px"
+                  className="object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.55)]"
+                />
+              </div>
+
+              {details.map((item) => (
+                <div
+                  key={item.title}
+                  className="animate-fade-up absolute right-0 z-20 hidden w-52 rounded-[1.1rem] border border-[rgba(219,194,137,0.4)] bg-[rgba(16,13,11,0.88)] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.24)] lg:block"
+                  style={{ top: item.top }}
+                >
+                  <p className="text-[11px] uppercase tracking-[0.28em] text-[#d8bf87]">{item.title}</p>
+                  <p className="mt-2 text-xs leading-6 text-[#e0d2bb]">{item.copy}</p>
+                </div>
+              ))}
+
+              <div className="absolute right-6 top-[15%] hidden flex-col gap-4 lg:flex">
+                <div className="animate-soft-glow flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(219,194,137,0.4)] bg-[rgba(12,10,9,0.9)] text-[#e8d6ad] shadow-[0_12px_24px_rgba(0,0,0,0.24)]">
+                  *
+                </div>
+                <div className="animate-soft-glow flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(219,194,137,0.4)] bg-[rgba(12,10,9,0.9)] text-[#d6b56e] shadow-[0_12px_24px_rgba(0,0,0,0.24)]">
+                  o
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-20 mt-10 grid gap-5 sm:mt-14 sm:gap-6 lg:-mb-24 lg:mt-0 lg:grid-cols-3">
+            {cards.map((card) => (
+              <ProductCard
+                key={card.title}
+                title={card.title}
+                subtitle={card.subtitle}
+                image={card.image}
+                accent={card.accent}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4ede4] px-4 pb-16 pt-20 sm:px-6 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-36">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[2rem] bg-[#171210] px-6 py-8 text-[#f6efe3] shadow-[0_24px_70px_rgba(0,0,0,0.18)] sm:px-8 sm:py-10">
+              <p className="text-[11px] uppercase tracking-[0.42em] text-[#d2ae67]">
+                Why Choose Us
+              </p>
+              <h2 className="mt-4 text-4xl leading-none sm:text-6xl">
+                A richer luxury experience from first impression to final detail.
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-[#cdbca4] sm:text-lg">
+                We are building the homepage like a premium jewellery showcase, with stronger
+                storytelling, more visual confidence, and category cards that feel crafted rather
+                than generic.
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-3">
+              {features.map((item) => (
+                <article
+                  key={item.title}
+                  className="shimmer-sweep rounded-[1.75rem] border border-[#d7bf89]/25 bg-[linear-gradient(180deg,#fff7ee_0%,#f0e2d2_100%)] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(0,0,0,0.12)]"
+                >
+                  <div className="h-10 w-10 rounded-full border border-[#d7bf89]/50 bg-[#fff4e8]" />
+                  <h3 className="mt-5 text-[2rem] leading-none text-[#1f1a17]">{item.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-[#66584d]">{item.copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#11100f] px-4 py-16 text-[#f6efe3] sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.42em] text-[#d2ae67]">
+                Luxury Experience
+              </p>
+              <h2 className="mt-4 text-4xl leading-none sm:text-6xl">
+                More content, stronger presence, premium finish.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-8 text-[#cdbca4]">
+              The homepage now carries more storytelling and supporting content so it feels like a
+              complete luxury brand experience rather than only a hero section with a few cards.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {experience.map((item) => (
+              <article
+                key={item.number}
+                className="group rounded-[1.9rem] border border-[#d7bf89]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-6 transition duration-500 hover:-translate-y-1 hover:border-[#d7bf89]/40 hover:bg-[linear-gradient(180deg,rgba(212,175,99,0.10),rgba(255,255,255,0.02))]"
+              >
+                <p className="text-3xl text-[#d8b56d]">{item.number}</p>
+                <h3 className="mt-5 text-[2rem] leading-none text-[#f7eedf]">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-[#cdbca4]">{item.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

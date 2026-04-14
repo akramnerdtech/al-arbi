@@ -1,110 +1,133 @@
-'use client';
+const policySections = [
+  {
+    title: 'Introduction',
+    paragraphs: [
+      'Al-Arbi Jewellers is committed to protecting your privacy and handling personal information with care. This Privacy Policy explains how information is collected, used, and safeguarded when you visit our website or interact with our services.',
+      'We believe trust is part of luxury. For that reason, we present our privacy commitments clearly so you understand what data we collect, why we collect it, and how you remain in control of it.',
+    ],
+  },
+  {
+    title: 'What Information Is Collected About You',
+    paragraphs: [
+      'When you contact us, place an inquiry, or complete a transaction, we may collect information such as your name, phone number, email address, mailing address, and other relevant contact details.',
+      'When you browse the website, certain technical information may be collected automatically, including your browser type, IP address, device information, pages viewed, referral source, and visit timing.',
+      'Payment and billing information may also be processed through secure payment systems when purchases are made through our services.',
+    ],
+  },
+  {
+    title: 'How We Use The Information We Collect',
+    paragraphs: [
+      'Your information may be used to respond to inquiries, process transactions, provide service updates, improve the user experience, personalize communication, and protect the security of our website.',
+      'We may also use information to analyze customer preferences, improve product presentation, and share promotional updates where you have given consent or where permitted by applicable law.',
+    ],
+  },
+  {
+    title: 'Sharing Of Information',
+    paragraphs: [
+      'We do not sell, trade, or rent your personal information. We may share relevant data only with trusted service providers who support website operations, secure payment handling, communications, analytics, or legal compliance.',
+      'Such third parties are expected to handle information responsibly and only for the purpose of supporting our services.',
+    ],
+  },
+  {
+    title: 'Your Choices',
+    paragraphs: [
+      'You may choose how you interact with promotional messages and may opt out of marketing communication at any time. You may also request access to, correction of, or deletion of your personal information where applicable.',
+    ],
+  },
+  {
+    title: 'Security',
+    paragraphs: [
+      'We use reasonable technical and organizational measures to protect the information we collect. While no digital platform can guarantee absolute security, we work to maintain appropriate safeguards for your personal data.',
+    ],
+  },
+  {
+    title: 'Links To Other Websites',
+    paragraphs: [
+      'Our website may contain links to third-party platforms. We are not responsible for the privacy practices or content of those external websites and encourage you to review their privacy policies separately.',
+    ],
+  },
+  {
+    title: 'Changes To This Privacy Policy',
+    paragraphs: [
+      'This Privacy Policy may be updated periodically to reflect changes in our services, business operations, or legal obligations. Updates will become effective when posted on this website.',
+    ],
+  },
+  {
+    title: 'Contact Us',
+    paragraphs: [
+      'If you have questions about this Privacy Policy or how your information is handled, please contact Al-Arbi Jewellers.',
+      'Email: al.arbijewellers012024@gmail.com',
+      'Address: Shop no.5 Shri Sai Apartment, near Kalam Collection, Sanjiv Nagar, Ambad Link Road, 422010',
+      'Phone: 2534043265',
+    ],
+  },
+];
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-black min-h-screen text-yellow-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Header */}
-        <div className="mb-8 md:mb-12 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-yellow-300 mb-4">
-            Privacy Policy
-          </h1>
-          {/* <p className="text-yellow-200 text-lg">Last updated: April 2026</p> */}
+    <main className="min-h-screen bg-[#f6efe6]">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(212,175,99,0.18),transparent_24%),linear-gradient(180deg,#0a0908_0%,#13100e_100%)] pb-12 pt-24 sm:pb-16 sm:pt-32">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:96px_96px] opacity-20" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-[2rem] border border-[#d4af63]/20 bg-[rgba(15,12,10,0.92)] px-5 py-7 shadow-[0_30px_90px_rgba(0,0,0,0.38)] sm:rounded-[2.2rem] sm:px-8 lg:px-12 lg:py-10">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.42em] text-[#d4af63]">
+                  Legal & Privacy
+                </p>
+                <h1 className="mt-4 text-4xl leading-none text-[#f7eddc] sm:text-6xl lg:text-[5rem]">
+                  Privacy Policy
+                </h1>
+              </div>
+
+              <div className="rounded-full border border-[#d4af63]/20 bg-[rgba(212,175,99,0.06)] px-4 py-2 text-xs text-[#eadfcd] sm:text-sm">
+                Home / Privacy Policy
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Content */}
-        <div className="space-y-6 md:space-y-8">
-          {/* Introduction */}
-          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Introduction</h2>
-            <p className="text-yellow-200 leading-relaxed text-sm sm:text-base">
-              Welcome to Al-Arbi Jewellers. We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website.
-            </p>
-          </section>
-
-          {/* Information Collection */}
-          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Information We Collect</h2>
-            <div className="space-y-3 text-yellow-200 text-sm sm:text-base">
-              <p>
-                <strong className="text-white">Personal Information:</strong> Name, email address, phone number, mailing address, and other contact details when you voluntarily submit them through our website, contact forms, or purchase transactions.
-              </p>
-              <p>
-                <strong className="text-white">Automatic Information:</strong> Browser type, IP address, pages visited, time and date of visits, and other usage data collected through cookies and similar technologies.
-              </p>
-              <p>
-                <strong className="text-white">Payment Information:</strong> Credit card details and billing information processed through secure payment gateways.
+      <section className="px-4 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-14">
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-[1.6rem] border border-[#dcc8a4]/45 bg-[#fff9f2] p-4 shadow-[0_30px_70px_rgba(15,12,10,0.08)] sm:rounded-[2rem] sm:p-8 lg:p-10">
+            <div className="mb-8 rounded-[1.25rem] border border-[#e6d7bf] bg-[linear-gradient(180deg,#fffdf9_0%,#f6eee4_100%)] px-4 py-4 text-[#594c41] sm:mb-10 sm:rounded-[1.5rem] sm:px-5 sm:py-5">
+              <p className="text-sm leading-7">
+                This Privacy Policy is intended to inform you about the personal data that may be
+                collected from you, how your information may be used and disclosed, and how you
+                can control the use of your information while interacting with Al-Arbi Jewellers.
               </p>
             </div>
-          </section>
 
-          {/* Use of Information */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">How We Use Your Information</h2>
-            <ul className="space-y-2 text-gray-300 list-disc list-inside">
-              <li>Process and fulfill your orders</li>
-              <li>Communicate with you about your purchase or inquiry</li>
-              <li>Improve our website and services</li>
-              <li>Send promotional content and updates (with your consent)</li>
-              <li>Comply with legal obligations</li>
-              <li>Prevent fraud and enhance security</li>
-            </ul>
-          </section>
+            <div className="space-y-8">
+              {policySections.map((section, index) => (
+                <section
+                  key={section.title}
+                  className="rounded-[1.3rem] border border-[#e6d7bf] bg-[linear-gradient(180deg,#fffdfa_0%,#f8f1e7_100%)] px-4 py-5 sm:rounded-[1.6rem] sm:px-6 sm:py-6"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d4af63]/45 bg-[#fff5e7] text-sm font-semibold text-[#7a5d24]">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h2 className="text-[1.55rem] leading-none text-[#1d1a18] sm:text-[2.2rem]">
+                      {section.title}
+                    </h2>
+                  </div>
 
-          {/* Data Protection */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Data Protection & Security</h2>
-            <p className="text-gray-300 leading-relaxed">
-              We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, disclosure, alteration, and destruction. All sensitive data is encrypted and transmitted securely through SSL technology.
-            </p>
-          </section>
-
-          {/* Third-Party Sharing */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Sharing Your Information</h2>
-            <p className="text-gray-300 leading-relaxed">
-              We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist us in operating our website and conducting our business, subject to confidentiality agreements.
-            </p>
-          </section>
-
-          {/* Cookies */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Cookies</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Our website uses cookies to enhance your browsing experience. You can control cookie preferences through your browser settings. Disabling cookies may affect certain website functionalities.
-            </p>
-          </section>
-
-          {/* Your Rights */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Your Rights</h2>
-            <p className="text-gray-300 leading-relaxed">
-              You have the right to access, correct, or delete your personal information. You may also opt-out of marketing communications at any time. To exercise these rights, please contact us at privacy@al-arbi-jewellers.com.
-            </p>
-          </section>
-
-          {/* Contact Information */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Contact Us</h2>
-            <p className="text-gray-300 leading-relaxed">
-              If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
-            </p>
-            <div className="mt-4 text-gray-300">
-              <p><strong className="text-white">Email:</strong> al.arbijewellers012024@gmail.com</p>
-              <p><strong className="text-white">Address:</strong> Shop no.5 shri Sai Apartment, near kalam collection sanjiv nagar, Ambad Link Road-422010</p>
-              <p><strong className="text-white">Phone:-</strong> 2534043265</p>
+                  <div className="mt-5 space-y-4">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className="text-sm leading-8 text-[#54493e] sm:text-[15px]">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
-          </section>
-
-          {/* Changes Notice */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Changes to This Policy</h2>
-            <p className="text-gray-300 leading-relaxed">
-              We may update this Privacy Policy periodically to reflect changes in our practices and other factors. Your continued use of our website following the posting of revised changes constitutes your acceptance of such changes.
-            </p>
-          </section>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

@@ -1,164 +1,156 @@
-'use client';
+const termSections = [
+  {
+    title: 'Agreement To Terms',
+    paragraphs: [
+      'By accessing and using the Al-Arbi Jewellers website, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you should discontinue use of the website.',
+    ],
+  },
+  {
+    title: 'Use License',
+    paragraphs: [
+      'Permission is granted to temporarily access the materials on this website for personal, non-commercial viewing only. This is a license, not a transfer of ownership.',
+      'Under this license, you may not modify or copy materials, use them for commercial display, attempt to reverse engineer any software, remove proprietary notices, mirror content on another server, or violate applicable laws relating to access and use.',
+    ],
+  },
+  {
+    title: 'Disclaimer',
+    paragraphs: [
+      'All materials on the Al-Arbi Jewellers website are provided on an as-is basis. We make no guarantees or warranties, whether expressed or implied, including warranties related to merchantability, fitness for a particular purpose, or non-infringement.',
+    ],
+  },
+  {
+    title: 'Limitations Of Liability',
+    paragraphs: [
+      'Al-Arbi Jewellers and its suppliers shall not be liable for any damages arising from the use or inability to use materials on the website, including but not limited to loss of data, profits, or business interruption, even if advised of the possibility of such damages.',
+    ],
+  },
+  {
+    title: 'Product Information',
+    paragraphs: [
+      'We aim to present accurate product descriptions, pricing, and imagery. However, we do not guarantee that all descriptions or content will always be fully complete, current, or error-free.',
+      'Product appearance may vary slightly due to lighting, display differences, and photography conditions. Availability may also change without prior notice.',
+    ],
+  },
+  {
+    title: 'Pricing And Payment Terms',
+    paragraphs: [
+      'Prices shown on the website are subject to change without notice. Applicable taxes, shipping charges, and related fees may be added at checkout where relevant.',
+      'Payment must be received and successfully processed before an order is confirmed, prepared, or dispatched.',
+    ],
+  },
+  {
+    title: 'Return And Refund Policy',
+    paragraphs: [
+      'Items may be eligible for return within the stated return window if they are unused, undamaged, and returned with original packaging and relevant documentation.',
+      'Refunds, where approved, are processed after inspection of the returned item. Return shipping costs may apply unless the return is due to a verified defect or fulfilment error.',
+    ],
+  },
+  {
+    title: 'Warranty',
+    paragraphs: [
+      'Certain jewellery items may be covered by a limited warranty against manufacturing defects for the period communicated at purchase. This warranty does not cover misuse, accidental damage, improper storage, or normal wear and tear.',
+    ],
+  },
+  {
+    title: 'User Conduct',
+    paragraphs: [
+      'You agree not to use the website for unlawful activity or in any way that may damage, disable, overburden, or impair our services. Prohibited activity includes harassment, fraud, unauthorized access attempts, and transmission of offensive or harmful content.',
+    ],
+  },
+  {
+    title: 'Intellectual Property Rights',
+    paragraphs: [
+      'All content on this website, including text, graphics, logos, images, product presentation, and software, is the property of Al-Arbi Jewellers or its licensors and is protected by applicable intellectual property laws.',
+    ],
+  },
+  {
+    title: 'Modification Of Terms',
+    paragraphs: [
+      'We reserve the right to revise these Terms and Conditions at any time. Continued use of the website following updates constitutes acceptance of the revised terms.',
+    ],
+  },
+  {
+    title: 'Governing Law',
+    paragraphs: [
+      'These Terms and Conditions are governed by the applicable laws of the relevant jurisdiction. Any disputes arising from use of this website will be subject to the exclusive jurisdiction of the appropriate courts.',
+    ],
+  },
+  {
+    title: 'Contact Information',
+    paragraphs: [
+      'If you have questions about these Terms and Conditions, please contact Al-Arbi Jewellers.',
+      'Email: al.arbijewellers012024@gmail.com',
+      'Address: Shop no.5 Shri Sai Apartment, near Kalam Collection, Sanjiv Nagar, Ambad Link Road, 422010',
+      'Phone: 2534043265',
+    ],
+  },
+];
 
 export default function TermsCondition() {
   return (
-    <div className="bg-black min-h-screen text-yellow-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        {/* Header */}
-        <div className="mb-8 md:mb-12 text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-yellow-300 mb-4">
-            Terms & Conditions
-          </h1>
-          {/* <p className="text-yellow-200 text-lg">Last updated: April 2026</p> */}
+    <main className="min-h-screen bg-[#f6efe6]">
+      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_top,rgba(212,175,99,0.18),transparent_24%),linear-gradient(180deg,#0a0908_0%,#13100e_100%)] pb-12 pt-24 sm:pb-16 sm:pt-32">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:96px_96px] opacity-20" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-[2rem] border border-[#d4af63]/20 bg-[rgba(15,12,10,0.92)] px-5 py-7 shadow-[0_30px_90px_rgba(0,0,0,0.38)] sm:rounded-[2.2rem] sm:px-8 lg:px-12 lg:py-10">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.42em] text-[#d4af63]">
+                  Legal & Policies
+                </p>
+                <h1 className="mt-4 text-4xl leading-none text-[#f7eddc] sm:text-6xl lg:text-[5rem]">
+                  Terms And Conditions
+                </h1>
+              </div>
+
+              <div className="rounded-full border border-[#d4af63]/20 bg-[rgba(212,175,99,0.06)] px-4 py-2 text-xs text-[#eadfcd] sm:text-sm">
+                Home / Terms & Conditions
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Content */}
-        <div className="space-y-6 md:space-y-8">
-          {/* Agreement */}
-          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Agreement to Terms</h2>
-            <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-              By accessing and using the Al-Arbi Jewellers website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-            </p>
-          </section>
-
-          {/* Use License */}
-          <section className="border-l-4 border-yellow-500 pl-4 md:pl-6 py-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-3">Use License</h2>
-            <p className="text-gray-300 leading-relaxed mb-3 text-sm sm:text-base">
-              Permission is granted to temporarily download one copy of the materials (information or software) from Al-Arbi Jewellers website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-            </p>
-            <ul className="space-y-2 text-gray-300 list-disc list-inside text-sm sm:text-base">
-              <li>Modify or copy the materials</li>
-              <li>Use the materials for any commercial purpose or for any public display</li>
-              <li>Attempt to decompile or reverse engineer any software contained on the website</li>
-              <li>Remove any copyright or other proprietary notations from the materials</li>
-              <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
-              <li>Violate any applicable laws or regulations relating to access to or use of the website</li>
-            </ul>
-          </section>
-
-          {/* Disclaimer */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Disclaimer</h2>
-            <p className="text-gray-300 leading-relaxed">
-              The materials on Al-Arbi Jewellers website are provided on an 'as is' basis. We make no warranties, expressed or implied, and hereby disclaim and negate all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
-            </p>
-          </section>
-
-          {/* Limitations */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Limitations of Liability</h2>
-            <p className="text-gray-300 leading-relaxed">
-              In no event shall Al-Arbi Jewellers or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the website materials, even if we or our authorized representative has been notified orally or in writing of the possibility of such damage.
-            </p>
-          </section>
-
-          {/* Product Information */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Product Information</h2>
-            <div className="space-y-3 text-gray-300">
-              <p>
-                We strive to provide accurate descriptions and images of our jewellery products. However, we do not warrant that product descriptions, pricing, or other content is accurate, complete, reliable, current, or error-free.
-              </p>
-              <p>
-                Product colors on our website may appear slightly different due to monitor settings and lighting conditions. All items are subject to availability. We reserve the right to discontinue any product at any time.
+      <section className="px-4 pb-16 pt-8 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28 lg:pt-14">
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-[1.6rem] border border-[#dcc8a4]/45 bg-[#fff9f2] p-4 shadow-[0_30px_70px_rgba(15,12,10,0.08)] sm:rounded-[2rem] sm:p-8 lg:p-10">
+            <div className="mb-8 rounded-[1.25rem] border border-[#e6d7bf] bg-[linear-gradient(180deg,#fffdf9_0%,#f6eee4_100%)] px-4 py-4 text-[#594c41] sm:mb-10 sm:rounded-[1.5rem] sm:px-5 sm:py-5">
+              <p className="text-sm leading-7">
+                These Terms and Conditions explain the rules, responsibilities, and legal
+                commitments that apply when you access, browse, or interact with the
+                Al-Arbi Jewellers website and its services.
               </p>
             </div>
-          </section>
 
-          {/* Pricing & Payment */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Pricing & Payment Terms</h2>
-            <ul className="space-y-2 text-gray-300 list-disc list-inside">
-              <li>All prices are listed in the currency specified on the website</li>
-              <li>Prices are subject to change without notice</li>
-              <li>We accept all major credit cards and secure payment methods</li>
-              <li>Payment must be received before items are shipped</li>
-              <li>Applicable taxes and shipping fees will be added to your order</li>
-            </ul>
-          </section>
+            <div className="space-y-8">
+              {termSections.map((section, index) => (
+                <section
+                  key={section.title}
+                  className="rounded-[1.3rem] border border-[#e6d7bf] bg-[linear-gradient(180deg,#fffdfa_0%,#f8f1e7_100%)] px-4 py-5 sm:rounded-[1.6rem] sm:px-6 sm:py-6"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#d4af63]/45 bg-[#fff5e7] text-sm font-semibold text-[#7a5d24]">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h2 className="text-[1.55rem] leading-none text-[#1d1a18] sm:text-[2.2rem]">
+                      {section.title}
+                    </h2>
+                  </div>
 
-          {/* Return & Refund Policy */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Return & Refund Policy</h2>
-            <div className="space-y-3 text-gray-300">
-              <p>
-                <strong className="text-white">Return Window:</strong> Items may be returned within 30 days of purchase in original condition with all packaging and accessories.
-              </p>
-              <p>
-                <strong className="text-white">Condition:</strong> Returned items must be unworn, undamaged, and in their original packaging.
-              </p>
-              <p>
-                <strong className="text-white">Refund Process:</strong> Refunds will be processed within 10-14 business days after receipt and inspection of the returned item.
-              </p>
-              <p>
-                <strong className="text-white">Shipping:</strong> Customer is responsible for return shipping costs unless the item is defective or received in error.
-              </p>
+                  <div className="mt-5 space-y-4">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph} className="text-sm leading-8 text-[#54493e] sm:text-[15px]">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              ))}
             </div>
-          </section>
-
-          {/* Warranty */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Product Warranty</h2>
-            <p className="text-gray-300 leading-relaxed">
-              All jewellery items come with a warranty against manufacturing defects for one year from the date of purchase. This warranty does not cover damage from misuse, accidents, or normal wear and tear. For warranty claims, contact our customer service team.
-            </p>
-          </section>
-
-          {/* User Conduct */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">User Conduct</h2>
-            <p className="text-gray-300 leading-relaxed mb-3">
-              You agree not to use the website for any unlawful purpose or in any way that could damage or impair our services. Prohibited behavior includes:
-            </p>
-            <ul className="space-y-2 text-gray-300 list-disc list-inside">
-              <li>Harassing or causing distress or inconvenience to any person</li>
-              <li>Transmitting obscene or offensive content</li>
-              <li>Disrupting the normal flow of dialogue within our website</li>
-              <li>Attempting to gain unauthorized access to our systems</li>
-              <li>Engaging in any form of fraud</li>
-            </ul>
-          </section>
-
-          {/* Intellectual Property */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Intellectual Property Rights</h2>
-            <p className="text-gray-300 leading-relaxed">
-              All content on this website, including text, graphics, logos, images, and software, is the property of Al-Arbi Jewellers and is protected by international copyright laws. Unauthorized use of any materials is prohibited.
-            </p>
-          </section>
-
-          {/* Modification Rights */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Modification of Terms</h2>
-            <p className="text-gray-300 leading-relaxed">
-              Al-Arbi Jewellers reserves the right to modify these terms and conditions at any time. Changes will be effective immediately upon posting to the website. Your continued use of the website constitutes acceptance of the modified terms.
-            </p>
-          </section>
-
-          {/* Governing Law */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4 bg-yellow-900 bg-opacity-10 rounded">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Governing Law</h2>
-            <p className="text-gray-300 leading-relaxed">
-              These terms and conditions are governed by and construed in accordance with the laws of your jurisdiction, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
-            </p>
-          </section>
-
-          {/* Contact Information */}
-          <section className="border-l-4 border-yellow-500 pl-6 py-4">
-            <h2 className="text-2xl font-bold text-yellow-400 mb-3">Contact Information</h2>
-            <p className="text-gray-300 leading-relaxed mb-4">
-              If you have any questions about these Terms & Conditions, please contact us:
-            </p>
-            <div className="text-gray-300">
-              <p><strong className="text-white">Email:</strong>  al.arbijewellers012024@gmail.com</p>
-              <p><strong className="text-white">Address:</strong> Shop no.5 shri Sai Apartment, near kalam collection sanjiv nagar, Ambad Link Road-422010</p>
-              <p><strong className="text-white">Phone:-</strong> 2534043265</p>
-            </div>
-          </section>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
