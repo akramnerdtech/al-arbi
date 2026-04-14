@@ -13,14 +13,14 @@ export default function Header() {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="flex items-center space-x-4">
-              <Image
-                src="/arbi.jpg"
-                alt="Arbi Jewellers Logo"
-                width={60}
-                height={40}
-                className="object-contain"
-              />
+            <div className="flex items-center space-x-4 ">
+<Image
+  src="/logo1.png"
+  alt="Arbi Jewellers Logo"
+  width={90}
+  height={40}
+  className="object-contain "
+/>
               {/* <span className="text-2xl font-black text-yellow-400 hidden sm:inline tracking-wider drop-shadow-lg group-hover:text-yellow-300 transition-colors duration-300">
                 ARBI JEWELLERS
               </span> */}
