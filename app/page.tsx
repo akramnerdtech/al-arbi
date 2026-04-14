@@ -1,20 +1,23 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 
 const cards = [
   {
-    title: 'Bracelets',
+    title: 'Chain',
     subtitle: 'Categories',
     image: '/chain.png',
     accent: 'Layered gold polish for statement styling.',
   },
   {
-    title: 'Earings',
+    title: 'Necklace',
     subtitle: 'Categories',
     image: '/necklace.png',
     accent: 'Sparkling silhouettes for elegant occasions.',
   },
   {
-    title: 'Couple Rings',
+    title: 'Bangles',
     subtitle: 'Categories',
     image: '/bangles.png',
     accent: 'Symbolic luxury shaped with fine detailing.',
@@ -67,6 +70,39 @@ const experience = [
   },
 ];
 
+const videoCards = [
+  {
+   
+    videoSrc: '/hero-video.mp4',
+    thumbnail: '/necklace.png',
+    position:
+      'left-1/2 top-20 z-10 hidden w-48 -translate-x-[132%] rotate-[-4deg] lg:block xl:w-56',
+    tint: 'from-[#0f1839]/88 to-[#0c0c14]/92',
+  },
+  {
+
+    videoSrc: '/video1.mp4',
+    thumbnail: '/chain.png',
+    position:
+      'left-1/2 top-32 z-0 hidden w-48 translate-x-[88%] rotate-[4deg] lg:block xl:w-56',
+    tint: 'from-[#1c5c60]/86 to-[#10231f]/92',
+  },
+  {
+ 
+    videoSrc: '/video2.mp4',
+    thumbnail: '/bangles.png',
+    position:
+      'left-1/2 top-48 z-0 hidden w-48 -translate-x-[140%] rotate-[-2deg] lg:block xl:w-56',
+    tint: 'from-[#8B7355]/86 to-[#3E2723]/92',
+  },
+];
+
+const allVideos = [
+  { src: '/hero-video.mp4', title: 'Dazzling Teardrop', subtitle: 'Diamond Drop Earrings', thumbnail: '/necklace.png' },
+  { src: '/video1.mp4', title: 'Evening Glow', subtitle: 'Signature Styling', thumbnail: '/chain.png' },
+  { src: '/video2.mp4', title: 'Golden Cascade', subtitle: 'Premium Collection', thumbnail: '/bangles.png' },
+];
+
 function ProductCard({
   title,
   subtitle,
@@ -107,13 +143,25 @@ function ProductCard({
 
       <button className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#14110f] px-5 py-3 text-sm text-[#f7eddc] transition duration-300 hover:bg-[#231d19] hover:pr-6">
         Check More Products
-        <span aria-hidden="true">{'->'}</span>
+        <span aria-hidden="true">→</span>
       </button>
     </article>
   );
 }
 
 export default function Home() {
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+  const nextVideo = () => {
+    setCurrentVideoIndex((prev) => (prev + 1) % allVideos.length);
+  };
+
+  const prevVideo = () => {
+    setCurrentVideoIndex((prev) => (prev - 1 + allVideos.length) % allVideos.length);
+  };
+
+  const currentVideo = allVideos[currentVideoIndex];
+
   return (
     <main className="min-h-screen bg-[#f4ede4]">
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_10%,rgba(212,175,99,0.18),transparent_28%),linear-gradient(135deg,#050505_0%,#0a0908_42%,#14110f_100%)] text-[#f6efe3]">
@@ -148,7 +196,7 @@ export default function Home() {
 
               <div className="animate-fade-up-delay-2 mt-10 flex items-center gap-4 text-[#dbc28d] sm:mt-14 sm:gap-5">
                 <div className="h-px w-20 bg-gradient-to-r from-[#dbc28d] to-transparent" />
-                <span className="text-2xl">{'->'}</span>
+                <span className="text-2xl">→</span>
               </div>
             </div>
 
@@ -180,10 +228,10 @@ export default function Home() {
 
               <div className="absolute right-6 top-[15%] hidden flex-col gap-4 lg:flex">
                 <div className="animate-soft-glow flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(219,194,137,0.4)] bg-[rgba(12,10,9,0.9)] text-[#e8d6ad] shadow-[0_12px_24px_rgba(0,0,0,0.24)]">
-                  *
+                  ✦
                 </div>
                 <div className="animate-soft-glow flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(219,194,137,0.4)] bg-[rgba(12,10,9,0.9)] text-[#d6b56e] shadow-[0_12px_24px_rgba(0,0,0,0.24)]">
-                  o
+                  ◯
                 </div>
               </div>
             </div>
@@ -264,6 +312,115 @@ export default function Home() {
                 <p className="mt-4 text-sm leading-7 text-[#cdbca4]">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f7f0e6] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-[#b78d3f]">
+              Diamond Styling Edit
+            </p>
+            <h2 className="mt-4 text-4xl leading-none text-[#2a1d17] sm:text-5xl lg:text-[4.6rem]">
+              Styling 101 With Diamonds
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-[#6e5d51] sm:text-xl">
+              Trendsetting diamond jewellery suited for every occasion, presented through a layered
+              luxury video showcase.
+            </p>
+          </div>
+
+          <div className="relative mx-auto mt-12 max-w-6xl pb-6 sm:mt-16">
+            {/* Previous Button */}
+            <button 
+              onClick={prevVideo}
+              className="absolute left-0 top-1/2 z-30 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white lg:flex"
+            >
+              ‹
+            </button>
+            
+            {/* Next Button */}
+            <button 
+              onClick={nextVideo}
+              className="absolute right-0 top-1/2 z-30 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white lg:flex"
+            >
+              ›
+            </button>
+
+            {/* Side Video Cards */}
+            {videoCards.map((card, index) => (
+              <div
+                key={card.videoSrc}
+                className={`absolute ${card.position} overflow-hidden rounded-[1.6rem] bg-gradient-to-b ${card.tint} p-3 shadow-[0_30px_60px_rgba(0,0,0,0.24)] transition-all duration-500 ${
+                  index === currentVideoIndex ? 'scale-105 opacity-100' : 'opacity-60'
+                }`}
+              >
+                <div className="relative aspect-[0.82/1] overflow-hidden rounded-[1.15rem] bg-black">
+                  <video
+                    className="h-full w-full object-cover opacity-88"
+                    src={card.videoSrc}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.58))]" />
+                </div>
+              </div>
+            ))}
+
+            {/* Main Video Player */}
+            <div className="relative z-20 mx-auto max-w-xl overflow-hidden rounded-[1.9rem] border border-[#d6b56e]/20 bg-[#11100f] p-3 shadow-[0_34px_80px_rgba(0,0,0,0.28)] transition-all duration-500 sm:max-w-2xl">
+              <div className="relative overflow-hidden rounded-[1.5rem] bg-black">
+                <video
+                  key={currentVideo.src}
+                  className="aspect-[0.82/1] w-full object-cover sm:aspect-[0.88/1]"
+                  src={currentVideo.src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                />
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.72))] p-4 sm:p-5">
+                  <div className="flex flex-wrap gap-3">
+                    <div className="pointer-events-auto flex items-center gap-3 rounded-[1.1rem] border border-white/15 bg-[rgba(18,17,15,0.82)] px-3 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.22)] backdrop-blur-md">
+                      <div className="relative h-14 w-14 overflow-hidden rounded-xl bg-[#f4e6d3]">
+                        <Image
+                          src={currentVideo.thumbnail}
+                          alt={currentVideo.title}
+                          fill
+                          sizes="56px"
+                          className="object-contain p-2"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium leading-5 text-[#f7efdf]">
+                          {currentVideo.title}
+                        </p>
+                        <p className="text-xs leading-5 text-[#d5c4ab]">
+                          {currentVideo.subtitle}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Video Navigation Dots */}
+                  <div className="mt-4 flex items-center justify-center gap-3">
+                    {allVideos.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentVideoIndex(index)}
+                        className={`h-1.5 rounded-full transition-all duration-300 ${
+                          index === currentVideoIndex ? 'w-10 bg-white' : 'w-1.5 bg-white/35 hover:bg-white/60'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
