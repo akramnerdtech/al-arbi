@@ -76,7 +76,7 @@ const videoCards = [
     videoSrc: '/hero-video.mp4',
     thumbnail: '/necklace.png',
     position:
-      'left-1/2 top-20 z-10 hidden w-48 -translate-x-[132%] rotate-[-4deg] lg:block xl:w-56',
+      'right-1/2 top-20 z-10  w-48 -translate-x-[112%] h-[550px] lg:block xl:w-56',
     tint: 'from-[#0f1839]/88 to-[#0c0c14]/92',
   },
   {
@@ -84,23 +84,22 @@ const videoCards = [
     videoSrc: '/video1.mp4',
     thumbnail: '/chain.png',
     position:
-      'left-1/2 top-32 z-0 hidden w-48 translate-x-[88%] rotate-[4deg] lg:block xl:w-56',
+      'left-1/2 top-20 z-10 w-48 translate-x-[112%] h-[550px] lg:block xl:w-56',
     tint: 'from-[#1c5c60]/86 to-[#10231f]/92',
   },
   {
  
     videoSrc: '/video2.mp4',
-    thumbnail: '/bangles.png',
     position:
-      'left-1/2 top-48 z-0 hidden w-48 -translate-x-[140%] rotate-[-2deg] lg:block xl:w-56',
+      'right-1/2 top-34 z-0 hidden w-48 -translate-x-[162%]  lg:block xl:w-56',
     tint: 'from-[#8B7355]/86 to-[#3E2723]/92',
   },
 ];
 
 const allVideos = [
-  { src: '/hero-video.mp4', title: 'Dazzling Teardrop', subtitle: 'Diamond Drop Earrings', thumbnail: '/necklace.png' },
-  { src: '/video1.mp4', title: 'Evening Glow', subtitle: 'Signature Styling', thumbnail: '/chain.png' },
-  { src: '/video2.mp4', title: 'Golden Cascade', subtitle: 'Premium Collection', thumbnail: '/bangles.png' },
+  { src: '/hero-video.mp4', },
+  { src: '/video1.mp4',},
+  { src: '/video2.mp4' },
 ];
 
 function ProductCard({
@@ -352,11 +351,9 @@ export default function Home() {
             {videoCards.map((card, index) => (
               <div
                 key={card.videoSrc}
-                className={`absolute ${card.position} overflow-hidden rounded-[1.6rem] bg-gradient-to-b ${card.tint} p-3 shadow-[0_30px_60px_rgba(0,0,0,0.24)] transition-all duration-500 ${
-                  index === currentVideoIndex ? 'scale-105 opacity-100' : 'opacity-60'
-                }`}
+                className={`absolute ${card.position} overflow-hidden rounded-[0.5rem] bg-gradient-to-b ${card.tint}  transition-all duration-500`}
               >
-                <div className="relative aspect-[0.82/1] overflow-hidden rounded-[1.15rem] bg-black">
+                {/* <div className="relative overflow-hidden rounded-[1.15rem] bg-black"> */}
                   <video
                     className="h-full w-full object-cover opacity-88"
                     src={card.videoSrc}
@@ -365,14 +362,14 @@ export default function Home() {
                     loop
                     playsInline
                   />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.58))]" />
-                </div>
-              </div>
+                  {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.58))]" />
+                </div> */}
+              // </div>
             ))}
 
             {/* Main Video Player */}
-            <div className="relative z-20 mx-auto max-w-xl overflow-hidden rounded-[1.9rem] border border-[#d6b56e]/20 bg-[#11100f] p-3 shadow-[0_34px_80px_rgba(0,0,0,0.28)] transition-all duration-500 sm:max-w-2xl">
-              <div className="relative overflow-hidden rounded-[1.5rem] bg-black">
+            <div className="relative z-20 mx-auto max-w-xl overflow-hidden rounded-[1.9rem] border border-[#d6b56e]/20  shadow-[0_34px_80px_rgba(0,0,0,0.28)] transition-all duration-500 sm:max-w-2xl">
+              <div className="relative overflow-hidden rounded-[1.5rem] ">
                 <video
                   key={currentVideo.src}
                   className="aspect-[0.82/1] w-full object-cover sm:aspect-[0.88/1]"
@@ -385,25 +382,7 @@ export default function Home() {
                 />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.72))] p-4 sm:p-5">
                   <div className="flex flex-wrap gap-3">
-                    <div className="pointer-events-auto flex items-center gap-3 rounded-[1.1rem] border border-white/15 bg-[rgba(18,17,15,0.82)] px-3 py-3 shadow-[0_10px_24px_rgba(0,0,0,0.22)] backdrop-blur-md">
-                      <div className="relative h-14 w-14 overflow-hidden rounded-xl bg-[#f4e6d3]">
-                        <Image
-                          src={currentVideo.thumbnail}
-                          alt={currentVideo.title}
-                          fill
-                          sizes="56px"
-                          className="object-contain p-2"
-                        />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium leading-5 text-[#f7efdf]">
-                          {currentVideo.title}
-                        </p>
-                        <p className="text-xs leading-5 text-[#d5c4ab]">
-                          {currentVideo.subtitle}
-                        </p>
-                      </div>
-                    </div>
+                   
                   </div>
 
                   {/* Video Navigation Dots */}
