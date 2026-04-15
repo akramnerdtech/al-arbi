@@ -72,33 +72,27 @@ const experience = [
 
 const videoCards = [
   {
-   
     videoSrc: '/hero-video.mp4',
     thumbnail: '/necklace.png',
-    position:
-      'right-1/2 top-20 z-10  w-48 -translate-x-[112%] h-[550px] lg:block xl:w-56',
+    position: 'right-1/2 top-20 z-10 w-48 -translate-x-[112%] h-[550px] hidden lg:block xl:w-56',
     tint: 'from-[#0f1839]/88 to-[#0c0c14]/92',
   },
   {
-
     videoSrc: '/video1.mp4',
     thumbnail: '/chain.png',
-    position:
-      'left-1/2 top-20 z-10 w-48 translate-x-[112%] h-[550px] lg:block xl:w-56',
+    position: 'left-1/2 top-20 z-10 w-48 translate-x-[112%] h-[550px] hidden lg:block xl:w-56',
     tint: 'from-[#1c5c60]/86 to-[#10231f]/92',
   },
   {
- 
     videoSrc: '/video2.mp4',
-    position:
-      'right-1/2 top-34 z-0 hidden w-48 -translate-x-[162%]  lg:block xl:w-56',
+    position: 'right-1/2 top-34 z-0 w-48 -translate-x-[162%] hidden lg:block xl:w-56',
     tint: 'from-[#8B7355]/86 to-[#3E2723]/92',
   },
 ];
 
 const allVideos = [
-  { src: '/hero-video.mp4', },
-  { src: '/video1.mp4',},
+  { src: '/hero-video.mp4' },
+  { src: '/video1.mp4' },
   { src: '/video2.mp4' },
 ];
 
@@ -140,7 +134,7 @@ function ProductCard({
 
       <p className="mt-4 text-sm leading-7 text-[#695748]">{accent}</p>
 
-      <button className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#14110f] px-5 py-3 text-sm text-[#f7eddc] transition duration-300 hover:bg-[#231d19] hover:pr-6">
+      <button className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#14110f] px-5 py-3 text-sm text-[#f7eddc] transition duration-300 hover:bg-[#231d19] sm:w-auto">
         Check More Products
         <span aria-hidden="true">→</span>
       </button>
@@ -163,6 +157,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#f4ede4]">
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-[radial-gradient(circle_at_20%_10%,rgba(212,175,99,0.18),transparent_28%),linear-gradient(135deg,#050505_0%,#0a0908_42%,#14110f_100%)] text-[#f6efe3]">
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:88px_88px] opacity-20" />
         <div className="animate-soft-glow absolute -left-20 top-20 h-56 w-56 rounded-full bg-[#d4af63]/12 blur-3xl" />
@@ -171,20 +166,22 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:px-8 lg:pb-28 lg:pt-32">
           <div className="grid gap-10 sm:gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
-            <div className="max-w-xl pt-6 lg:pt-12">
+            
+            {/* Hero Text */}
+            <div className="max-w-xl pt-6 lg:pt-12 text-center lg:text-left mx-auto lg:mx-0">
               <p className="animate-fade-up text-[11px] uppercase tracking-[0.45em] text-[#c9b07a]">
                 Jewelry Design With Love
               </p>
-              <h1 className="animate-fade-up-delay-1 mt-5 text-4xl leading-[0.92] tracking-tight text-[#f8f1e7] sm:mt-6 sm:text-6xl lg:text-[6.3rem]">
+              <h1 className="animate-fade-up-delay-1 mt-5 text-4xl leading-[1.1] tracking-tight text-[#f8f1e7] sm:mt-6 sm:text-6xl lg:text-[6.3rem] lg:leading-[0.92]">
                 The Perfect
                 <span className="block">Jewels For You</span>
               </h1>
-              <p className="animate-fade-up-delay-2 mt-5 max-w-lg text-sm leading-7 text-[#d2c3ad] sm:mt-6 sm:text-lg sm:leading-8">
+              <p className="animate-fade-up-delay-2 mt-5 text-sm leading-7 text-[#d2c3ad] sm:mt-6 sm:text-lg sm:leading-8">
                 Discover a luxurious black-and-gold collection with elegant craftsmanship,
                 rich detailing, and a premium boutique presentation.
               </p>
 
-              <div className="animate-fade-up-delay-2 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:items-center sm:gap-4">
+              <div className="animate-fade-up-delay-2 mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:justify-center lg:justify-start sm:gap-4">
                 <button className="w-full rounded-full bg-white px-6 py-3.5 text-base font-medium text-[#111513] shadow-[0_12px_30px_rgba(255,255,255,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(255,255,255,0.2)] sm:w-auto sm:px-8 sm:py-4">
                   Contact Us
                 </button>
@@ -193,17 +190,18 @@ export default function Home() {
                 </button>
               </div>
 
-              <div className="animate-fade-up-delay-2 mt-10 flex items-center gap-4 text-[#dbc28d] sm:mt-14 sm:gap-5">
+              <div className="animate-fade-up-delay-2 mt-10 hidden items-center gap-4 text-[#dbc28d] sm:mt-14 sm:gap-5 lg:flex">
                 <div className="h-px w-20 bg-gradient-to-r from-[#dbc28d] to-transparent" />
                 <span className="text-2xl">→</span>
               </div>
             </div>
 
-            <div className="relative min-h-[280px] sm:min-h-[420px] lg:min-h-[720px]">
+            {/* Hero Image */}
+            <div className="relative min-h-[320px] sm:min-h-[420px] lg:min-h-[720px]">
               <div className="animate-soft-glow absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(212,175,99,0.16),transparent_62%)]" />
-              <div className="absolute left-1/2 top-1/2 h-[82%] w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(240,232,220,0.12)]" />
+              <div className="absolute left-1/2 top-1/2 h-[90%] w-[90%] lg:h-[82%] lg:w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(240,232,220,0.12)]" />
 
-              <div className="animate-float-gold absolute left-1/2 top-1/2 z-10 h-[78%] w-[78%] -translate-x-1/2 -translate-y-1/2">
+              <div className="animate-float-gold absolute left-1/2 top-1/2 z-10 h-[85%] w-[85%] lg:h-[78%] lg:w-[78%] -translate-x-1/2 -translate-y-1/2">
                 <Image
                   src="/necklace.png"
                   alt="Featured premium jewellery"
@@ -217,7 +215,7 @@ export default function Home() {
               {details.map((item) => (
                 <div
                   key={item.title}
-                  className="animate-fade-up absolute right-0 z-20 hidden w-52 rounded-[1.1rem] border border-[rgba(219,194,137,0.4)] bg-[rgba(16,13,11,0.88)] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.24)] lg:block"
+                  className="animate-fade-up absolute right-0 z-20 hidden w-52 rounded-[1.1rem] border border-[rgba(219,194,137,0.4)] bg-[rgba(16,13,11,0.88)] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.24)] xl:block"
                   style={{ top: item.top }}
                 >
                   <p className="text-[11px] uppercase tracking-[0.28em] text-[#d8bf87]">{item.title}</p>
@@ -225,7 +223,7 @@ export default function Home() {
                 </div>
               ))}
 
-              <div className="absolute right-6 top-[15%] hidden flex-col gap-4 lg:flex">
+              <div className="absolute right-2 sm:right-6 top-[15%] hidden flex-col gap-4 lg:flex">
                 <div className="animate-soft-glow flex h-14 w-14 items-center justify-center rounded-2xl border border-[rgba(219,194,137,0.4)] bg-[rgba(12,10,9,0.9)] text-[#e8d6ad] shadow-[0_12px_24px_rgba(0,0,0,0.24)]">
                   ✦
                 </div>
@@ -236,7 +234,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative z-20 mt-10 grid gap-5 sm:mt-14 sm:gap-6 lg:-mb-24 lg:mt-0 lg:grid-cols-3">
+          {/* Product Cards Row */}
+          <div className="relative z-20 mt-10 grid gap-5 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:-mb-24 lg:mt-0 lg:grid-cols-3">
             {cards.map((card) => (
               <ProductCard
                 key={card.title}
@@ -250,6 +249,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Section */}
       <section className="bg-[#f4ede4] px-4 pb-16 pt-20 sm:px-6 sm:pt-32 lg:px-8 lg:pb-24 lg:pt-36">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -257,25 +257,25 @@ export default function Home() {
               <p className="text-[11px] uppercase tracking-[0.42em] text-[#d2ae67]">
                 Why Choose Us
               </p>
-              <h2 className="mt-4 text-4xl leading-none sm:text-6xl">
+              <h2 className="mt-4 text-3xl leading-tight sm:text-5xl lg:text-6xl lg:leading-none">
                 A richer luxury experience from first impression to final detail.
               </h2>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-[#cdbca4] sm:text-lg">
+              <p className="mt-4 sm:mt-6 max-w-2xl text-sm leading-7 text-[#cdbca4] sm:text-lg sm:leading-8">
                 We are building the homepage like a premium jewellery showcase, with stronger
                 storytelling, more visual confidence, and category cards that feel crafted rather
                 than generic.
               </p>
             </div>
 
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
               {features.map((item) => (
                 <article
                   key={item.title}
                   className="shimmer-sweep rounded-[1.75rem] border border-[#d7bf89]/25 bg-[linear-gradient(180deg,#fff7ee_0%,#f0e2d2_100%)] p-6 shadow-[0_18px_40px_rgba(0,0,0,0.08)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_24px_50px_rgba(0,0,0,0.12)]"
                 >
                   <div className="h-10 w-10 rounded-full border border-[#d7bf89]/50 bg-[#fff4e8]" />
-                  <h3 className="mt-5 text-[2rem] leading-none text-[#1f1a17]">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-[#66584d]">{item.copy}</p>
+                  <h3 className="mt-5 text-xl sm:text-[2rem] sm:leading-none text-[#1f1a17]">{item.title}</h3>
+                  <p className="mt-3 sm:mt-4 text-sm leading-6 sm:leading-7 text-[#66584d]">{item.copy}</p>
                 </article>
               ))}
             </div>
@@ -283,6 +283,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Experience Section */}
       <section className="bg-[#11100f] px-4 py-16 text-[#f6efe3] sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -290,86 +291,85 @@ export default function Home() {
               <p className="text-[11px] uppercase tracking-[0.42em] text-[#d2ae67]">
                 Luxury Experience
               </p>
-              <h2 className="mt-4 text-4xl leading-none sm:text-6xl">
+              <h2 className="mt-4 text-3xl leading-tight sm:text-5xl lg:text-6xl lg:leading-none">
                 More content, stronger presence, premium finish.
               </h2>
             </div>
-            <p className="max-w-2xl text-base leading-8 text-[#cdbca4]">
+            <p className="max-w-2xl text-sm leading-7 text-[#cdbca4] sm:text-base sm:leading-8">
               The homepage now carries more storytelling and supporting content so it feels like a
               complete luxury brand experience rather than only a hero section with a few cards.
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {experience.map((item) => (
               <article
                 key={item.number}
                 className="group rounded-[1.9rem] border border-[#d7bf89]/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))] p-6 transition duration-500 hover:-translate-y-1 hover:border-[#d7bf89]/40 hover:bg-[linear-gradient(180deg,rgba(212,175,99,0.10),rgba(255,255,255,0.02))]"
               >
                 <p className="text-3xl text-[#d8b56d]">{item.number}</p>
-                <h3 className="mt-5 text-[2rem] leading-none text-[#f7eedf]">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-[#cdbca4]">{item.copy}</p>
+                <h3 className="mt-5 text-xl sm:text-[2rem] sm:leading-none text-[#f7eedf]">{item.title}</h3>
+                <p className="mt-3 sm:mt-4 text-sm leading-6 sm:leading-7 text-[#cdbca4]">{item.copy}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Video Section */}
       <section className="bg-[#f7f0e6] px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <p className="text-[11px] uppercase tracking-[0.4em] text-[#b78d3f]">
               Diamond Styling Edit
             </p>
-            <h2 className="mt-4 text-4xl leading-none text-[#2a1d17] sm:text-5xl lg:text-[4.6rem]">
+            <h2 className="mt-4 text-3xl leading-tight text-[#2a1d17] sm:text-5xl lg:text-[4.6rem] lg:leading-none">
               Styling 101 With Diamonds
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-base leading-8 text-[#6e5d51] sm:text-xl">
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-[#6e5d51] sm:text-base sm:leading-8 lg:text-xl">
               Trendsetting diamond jewellery suited for every occasion, presented through a layered
               luxury video showcase.
             </p>
           </div>
 
           <div className="relative mx-auto mt-12 max-w-6xl pb-6 sm:mt-16">
-            {/* Previous Button */}
+            
+            {/* Previous Button - Now visible on mobile */}
             <button 
               onClick={prevVideo}
-              className="absolute left-0 top-1/2 z-30 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white lg:flex"
+              className="absolute left-2 sm:-left-4 top-1/2 z-30 flex h-10 w-10 sm:h-14 sm:w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-2xl sm:text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white"
             >
               ‹
             </button>
             
-            {/* Next Button */}
+            {/* Next Button - Now visible on mobile */}
             <button 
               onClick={nextVideo}
-              className="absolute right-0 top-1/2 z-30 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white lg:flex"
+              className="absolute right-2 sm:-right-4 top-1/2 z-30 flex h-10 w-10 sm:h-14 sm:w-14 -translate-y-1/2 items-center justify-center rounded-full border border-[#d6b56e]/35 bg-white/90 text-2xl sm:text-3xl text-[#8c6b2f] shadow-[0_12px_32px_rgba(0,0,0,0.12)] transition duration-300 hover:scale-110 hover:bg-white"
             >
               ›
             </button>
 
-            {/* Side Video Cards */}
-            {videoCards.map((card, index) => (
+            {/* Side Video Cards - Strictly hidden on mobile to prevent overflow */}
+            {videoCards.map((card) => (
               <div
                 key={card.videoSrc}
-                className={`absolute ${card.position} overflow-hidden rounded-[0.5rem] bg-gradient-to-b ${card.tint}  transition-all duration-500`}
+                className={`absolute ${card.position} overflow-hidden rounded-[0.5rem] bg-gradient-to-b ${card.tint} transition-all duration-500`}
               >
-                {/* <div className="relative overflow-hidden rounded-[1.15rem] bg-black"> */}
-                  <video
-                    className="h-full w-full object-cover opacity-88"
-                    src={card.videoSrc}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  />
-                  {/* <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.12),rgba(0,0,0,0.58))]" />
-                </div> */}
-              // </div>
+                <video
+                  className="h-full w-full object-cover opacity-88"
+                  src={card.videoSrc}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              </div>
             ))}
 
             {/* Main Video Player */}
-            <div className="relative z-20 mx-auto max-w-xl overflow-hidden rounded-[1.9rem] border border-[#d6b56e]/20  shadow-[0_34px_80px_rgba(0,0,0,0.28)] transition-all duration-500 sm:max-w-2xl">
-              <div className="relative overflow-hidden rounded-[1.5rem] ">
+            <div className="relative z-20 mx-auto w-full max-w-sm sm:max-w-xl lg:max-w-2xl overflow-hidden rounded-[1.9rem] border border-[#d6b56e]/20 shadow-[0_34px_80px_rgba(0,0,0,0.28)] transition-all duration-500">
+              <div className="relative overflow-hidden rounded-[1.5rem]">
                 <video
                   key={currentVideo.src}
                   className="aspect-[0.82/1] w-full object-cover sm:aspect-[0.88/1]"
@@ -381,12 +381,9 @@ export default function Home() {
                   controls
                 />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,0.72))] p-4 sm:p-5">
-                  <div className="flex flex-wrap gap-3">
-                   
-                  </div>
-
+                  
                   {/* Video Navigation Dots */}
-                  <div className="mt-4 flex items-center justify-center gap-3">
+                  <div className="mt-4 flex items-center justify-center gap-3 pointer-events-auto">
                     {allVideos.map((_, index) => (
                       <button
                         key={index}
@@ -394,6 +391,7 @@ export default function Home() {
                         className={`h-1.5 rounded-full transition-all duration-300 ${
                           index === currentVideoIndex ? 'w-10 bg-white' : 'w-1.5 bg-white/35 hover:bg-white/60'
                         }`}
+                        aria-label={`Go to video ${index + 1}`}
                       />
                     ))}
                   </div>
