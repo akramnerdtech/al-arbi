@@ -201,7 +201,7 @@ export default function Home() {
               <div className="animate-soft-glow absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(circle_at_center,rgba(212,175,99,0.16),transparent_62%)]" />
               <div className="absolute left-1/2 top-1/2 h-[90%] w-[90%] lg:h-[82%] lg:w-[82%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(240,232,220,0.12)]" />
 
-              <div className="animate-float-gold absolute left-1/2 top-1/2 z-10 h-[85%] w-[85%] lg:h-[78%] lg:w-[78%] -translate-x-1/2 -translate-y-1/2">
+              <div className="animate-float-gold absolute md:top-[85%] md:left-[88%] left-[92%] top-[92%] z-10 h-[85%] w-[85%] lg:h-[78%] lg:w-[78%] -translate-x-1/2 -translate-y-1/2">
                 <Image
                   src="/necklace.png"
                   alt="Featured premium jewellery"
