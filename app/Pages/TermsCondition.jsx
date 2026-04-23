@@ -81,7 +81,7 @@ const termSections = [
       'If you have questions about these Terms and Conditions, please contact Al-Arbi Jewellers.',
       'Email: al.arbijewellers012024@gmail.com',
       'Address: Shop no.5 Shri Sai Apartment, near Kalam Collection, Sanjiv Nagar, Ambad Link Road, 422010',
-      'Phone: 2534043265',
+      'Phone: 02534043265',
     ],
   },
 ];

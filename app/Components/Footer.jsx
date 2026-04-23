@@ -45,10 +45,10 @@ export default function Footer() {
             <h3 className="text-lg font-semibold text-[#d5b46c]">Contact Us</h3>
             <div className="space-y-2 text-sm text-[#eee5d8]">
               <p>Al-Arbi Jewellers</p>
-              <p>123 Jewellery Street</p>
-              <p>Dubai, UAE</p>
-              <p>Phone: +971 XX XXX XXXX</p>
-              <p>Email: info@al-arbi-jewellers.com</p>
+              <p>Shop no.5 Shri Sai Apartment, near Kalam Collection,</p>
+              <p>Sanjiv Nagar, Ambad Link Road, 422010</p>
+              <p>Phone: 02534043265</p>
+              <p>Email: al.arbijewellers012024@gmail.com</p>
             </div>
           </div>
         </div>
